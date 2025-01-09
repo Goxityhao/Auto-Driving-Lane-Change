@@ -1,0 +1,44 @@
+{
+  "project": {
+    "project_root": "/path/to/your/project",
+    "data_dir": "/path/to/your/project/data",
+    "log_dir": "/path/to/your/project/logs",
+    "checkpoint_dir": "/path/to/your/project/checkpoints",
+    "results_dir": "/path/to/your/project/results",
+    "model_save": "experiments/exp_02_sac"
+  },
+  "training": {
+    "batch_size": 64,
+    "num_epochs": 100,
+    "learning_rate": 0.001,
+    "gamma": 0.99,
+    "tau": 0.005,
+    "alpha": 0.2,
+    "eval_interval": 10,
+    "log_interval": 5
+  },
+  "device": {
+    "use_cuda": true,
+    "seed": 42
+  },
+  "logging": {
+    "log_level": "INFO",
+    "save_logs": true,
+    "save_model_checkpoints": true
+  },
+  "network": {
+    "actor_lr": 0.0003,
+    "critic_lr": 0.001,
+    "value_lr": 0.0003
+  },
+  "dataset": {
+    "dataset_name": "my_dataset",
+    "dataset_size": 10000,
+    "use_augmentation": true
+  },
+  "misc": {
+    "use_multiprocessing": true,
+    "enable_checkpointing": true,
+    "checkpoint_freq": 10
+  }
+}

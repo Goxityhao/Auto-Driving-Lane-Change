@@ -1,0 +1,48 @@
+{
+    "training": {
+        "batch_size": 64,
+        "epochs": 50,
+        "learning_rate": 0.001,
+        "optimizer": "adam",
+        "early_stopping": true,
+        "early_stopping_patience": 5,
+        "save_model_interval": 10,
+        "checkpoint_dir": "./checkpoints",
+        "tensorboard_log_dir": "./logs",
+        "use_data_augmentation": true
+    },
+    "data": {
+        "dataset_path": "./data/behavior_cloning_dataset",
+        "image_size": [224, 224],
+        "normalize": true,
+        "split_ratio": 0.8,
+        "shuffle": true
+    },
+    "model": {
+        "architecture": "CNN",
+        "input_shape": [224, 224, 3],
+        "num_classes": 3,
+        "dropout_rate": 0.5,
+        "conv_layers": [
+            {"filters": 32, "kernel_size": 3, "strides": 1},
+            {"filters": 64, "kernel_size": 3, "strides": 1},
+            {"filters": 128, "kernel_size": 3, "strides": 1}
+        ],
+        "dense_layers": [
+            {"units": 512, "activation": "relu"},
+            {"units": 256, "activation": "relu"}
+        ]
+    },
+    "augmentation": {
+        "rotation_range": 30,
+        "width_shift_range": 0.2,
+        "height_shift_range": 0.2,
+        "zoom_range": 0.2,
+        "horizontal_flip": true,
+        "fill_mode": "nearest"
+    },
+    "logging": {
+        "enable_tensorboard": true,
+        "log_metrics": ["loss", "accuracy"]
+    }
+}

@@ -1,0 +1,56 @@
+{
+  "agent_behavior": {
+    "control_strategy": "keyboard",
+    "max_speed": 30.0,
+    "reaction_time": 0.5,
+    "lane_change_sensitivity": 0.7
+  },
+  "sensor_config": {
+    "camera": {
+      "enabled": true,
+      "fov": 90,
+      "width": 800,
+      "height": 600,
+      "position":{
+        "x": 0.8,
+        "y": 0.0,
+        "z": 1.4
+      },
+      "rotation": {
+        "roll": 0.0,
+        "pitch": 0.0,
+        "yaw": 0.0
+      }
+    },
+    "lidar": {
+      "enabled": true,
+      "range": 50.0,
+      "rotation_frequency": 10,
+      "points_per_second": 50000,
+      "position": [0.0, 0.0, 2.5],
+      "rotation": [0.0, 0.0, 0.0]
+    }
+  },
+  "behavior_logging": {
+    "enabled": true,
+    "log_file": "agent_behavior_log.txt"
+  },
+  "control_method": {
+    "type": "behavior_cloning",
+    "model_path": "models/behavior_cloning_model.h5",
+    "update_interval": 10
+  },
+  "ego_vehicle": {
+    "color":[0,255,0]
+  },
+  "ego_position": {
+    "x":100,
+    "y":13.4,
+    "z":15
+  },
+  "ego_rotation": {
+    "pitch": 0,
+    "yaw": 180,
+    "roll": 0
+  }
+}

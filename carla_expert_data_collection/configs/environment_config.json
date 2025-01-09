@@ -1,0 +1,70 @@
+{
+  "carla_server": {
+    "host": "localhost",
+    "port": 2000,
+    "timeout": 50
+  },
+  "weather": {
+    "cloudiness": 0.0,
+    "precipitation": 0.0,
+    "sun_azimuth_angle": 90.0,
+    "sun_elevation_angle": 45.0,
+    "fog_density": 0.0,
+    "fog_distance": 0.0,
+    "wetness": 0.0
+  },
+  "traffic": {
+    "spawn_rate": 0.7,
+    "vehicles": {
+      "spawn_count": 50,
+      "vehicle_types": ["vehicle.tesla.model3", "vehicle.ford.mustang", "vehicle.chevrolet.impala"]
+    },
+    "pedestrians": {
+      "spawn_count": 30,
+      "pedestrian_types": ["walker.pedestrian.0001", "walker.pedestrian.0002"]
+    },
+    "traffic_lights": {
+      "enabled": true,
+      "default_state": "green"
+    }
+  },
+  "world": {
+    "map": "Town04",
+    "weather_cycle": false,
+    "spawn_points": "random"
+  },
+  "pygame": {
+    "width": 1280,
+    "height": 720
+  },
+  "sync": "False",
+  "autopilot": 0,
+  "env_car": {
+    "num_car": 10,
+    "initial_position": [60,10,21,0,180,0],
+    "car_name": "vehicle.audi.a2",
+    "distance": [12,20],
+    "target_speed": 50
+  },
+    "same_line_env_car": {
+    "num_car": 2,
+    "initial_position": [80,13.4,21,0,180,0],
+    "car_name": "vehicle.audi.a2",
+    "distance": [12,20],
+    "target_speed": 50
+  },
+   "left_lane_vehicle": {
+    "num_car": 10,
+    "initial_position": [80,16.9,21,0,180,0],
+    "car_name": "vehicle.audi.a2",
+    "distance": [12,20],
+    "target_speed": 50
+  },
+
+  "auto_driving": {
+    "lane_change": "True",
+    "safe_distance": "True"
+
+  },
+  "target_position": [-71.5,9.3,13,0,180,0]
+}

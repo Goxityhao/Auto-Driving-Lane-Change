@@ -1,0 +1,30 @@
+{
+  "keyboard_control": {
+    "key_map": {
+      "accelerate": "W",
+      "brake": "S",
+      "turn_left": "A",
+      "turn_right": "D",
+      "hand_brake": "SPACE",
+      "reverse": "R"
+    },
+    "control_sensitivity": {
+      "steering": 0.5,
+      "throttle": 1.0,
+      "brake": 1.0
+    }
+  },
+  "vehicle_control": {
+    "max_throttle": 1.0,
+    "max_brake": 1.0,
+    "max_steering_angle": 0.7
+  },
+  "vehicle_settings": {
+    "gear": "drive",
+    "autopilot": false
+  },
+  "logging": {
+    "enabled": true,
+    "log_file": "control_log.txt"
+  }
+}

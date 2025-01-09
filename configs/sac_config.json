@@ -1,0 +1,65 @@
+{
+  "training": {
+    "batch_size": 256,
+    "num_epochs": 1000,
+    "learning_rate": 0.0003,
+    "gamma": 0.99,
+    "tau": 0.005,
+    "alpha": 0.2,
+    "eval_interval": 10,
+    "log_interval": 5,
+    "initial_temperature": 0.1,
+    "target_entropy": -3,
+    "replay_buffer_size": 1000000,
+    "update_interval": 1,
+    "learning_starts": 1000,
+    "gradient_steps": 1,
+    "num_updates_per_step": 1,
+    "critic_lr": 3e-4,
+    "actor_lr": 3e-4,
+    "value_lr": 3e-4
+  },
+  "actor": {
+    "state_dim": 10,
+    "action_dim": 2,
+    "action_range": 1.0
+  },
+  "critic": {
+    "state_dim": 10,
+    "action_dim": 2
+  },
+  "value_network": {
+    "state_dim": 10
+  },
+  "replay_buffer": {
+    "batch_size": 256,
+    "capacity": 1000000,
+    "alpha": 0.6,
+    "beta": 0.4,
+    "priority_eps": 1e-6
+  },
+  "device": {
+    "use_cuda": true,
+    "device_type": "cuda",
+    "seed": 42
+  },
+  "logging": {
+    "log_level": "INFO",
+    "log_dir": "logs",
+    "save_checkpoints": true,
+    "checkpoint_dir": "checkpoints",
+    "save_freq": 100
+  },
+  "exploration": {
+    "exploration_noise_type": "normal",
+    "exploration_noise_stddev": 0.1,
+    "use_exploration_noise": true
+  },
+  "environment": {
+    "env_name": "Carla",
+    "max_episode_length": 1000,
+    "observation_space": "state",
+    "action_space": "continuous",
+    "reward_type": "dense"
+  }
+}
