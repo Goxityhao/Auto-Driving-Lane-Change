@@ -1,0 +1,15 @@
+{
+  "ego_position": {
+    "x": 100,
+    "y": 13.4,
+    "z": 15
+  },
+  "ego_rotation": {
+    "pitch": 0,
+    "yaw": 180,
+    "roll": 0
+  },
+  "ego_vehicle": {
+    "color": [0,255,0]
+  }
+}
